@@ -1,0 +1,16 @@
+# Set some path locations for readability
+PYTHON_APPS = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/apps'
+STREAMS = '/opt/nvidia/deepstream/deepstream/samples/streams'
+DLI_APPS = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/dli_apps'
+
+# List the contents of the sample app
+!ls $DLI_APPS/csi-test
+
+
+# Check usage of the test3 mp4 app with the help option
+!cd $DLI_APPS/csi-test \
+    && python3 csi_test.py --help
+
+# Run the app
+!cd $DLI_APPS/csi-test \
+    && python3 csi_test.py -i /dev/video0
